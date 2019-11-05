@@ -4,9 +4,10 @@ public class Empresario {
 	private String cpf;
 	private DadosLogin dadosLogin;
 
-	public Empresario(String cpf, DadosLogin dadosLogin) {
+	public Empresario(String cpf, String email, String senha) {
 		this.cpf = cpf;
-		this.dadosLogin = dadosLogin;
+		this.email = email;
+		this.senha = senha;
 	}
 
 	public String getCpf() {
