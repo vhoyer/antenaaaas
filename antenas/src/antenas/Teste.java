@@ -19,7 +19,7 @@ class TesteAntenas {
 	}
 
 	@Test
-	void test() {
+	void AnAddedEmpresarioIsReturnedWhenLoginIsCalledWithTheRightLoginData() {
 		Antenas antenas = new Antenas();
 
 		antenas.addEmpresario(new Empresario("123", new DadosLogin("joao@gmail.com", "456")));
