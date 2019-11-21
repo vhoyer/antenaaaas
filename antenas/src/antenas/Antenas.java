@@ -38,7 +38,7 @@ public class Antenas {
 		return null;
 	}
 
-	//2. Implemente o método _(loginEmpresario)_ e seu método de dependência _(compararDadosLogin)_
+	//2. Implemente o metodo _(loginEmpresario)_ e seu metodo de dependencia _(compararDadosLogin)_
 	public Empresario loginEmpresario(DadosLogin dl) {
 		for(Empresario empresario : empresarios) {
 			if(empresario.getDadosLogin().compararDadosLogin(dl)) return empresario;
