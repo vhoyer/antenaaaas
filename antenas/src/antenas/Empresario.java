@@ -6,8 +6,7 @@ public class Empresario {
 
 	public Empresario(String cpf, String email, String senha) {
 		this.cpf = cpf;
-		this.email = email;
-		this.senha = senha;
+		this.dadosLogin = new DadosLogin(email, senha)
 	}
 
 	public String getCpf() {

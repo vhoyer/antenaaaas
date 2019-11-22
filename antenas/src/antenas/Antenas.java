@@ -27,6 +27,35 @@ public class Antenas {
 		professores.add(prof);
 	}
 
+
+	public Professor loginProfessor(DadosLogin dl) {
+		for(Professor professor : professores) {
+			if(professor.getDadosLogin().compararDadosLogin(dl)) return professor;
+		}
+		return null;
+	}
+
+	public Empresario loginEmpresario(DadosLogin dl) {
+		for(Empresario empresario : empresarios) {
+			if(empresario.getDadosLogin().compararDadosLogin(dl)) return empresario;
+		}
+		return null;
+	}
+
+	public Empresario loginEmpresario(DadosLogin dl) {
+		for(Empresario empresario : empresarios) {
+			if(empresario.getDadosLogin().compararDadosLogin(dl)) return empresario;
+		}
+		return null;
+	}
+
+	public Empresario loginEmpresario(DadosLogin dl) {
+		for(Empresario empresario : empresarios) {
+			if(empresario.getDadosLogin().compararDadosLogin(dl)) return empresario;
+		}
+		return null;
+	}
+
 	public void addProjeto(Projeto proj) {
 		projetos.add(proj);
 	}
@@ -36,17 +65,5 @@ public class Antenas {
 			if(projeto.getChave().equals(chave)) return projeto;
 		}
 		return null;
-	}
-
-	//2. Implemente o metodo _(loginEmpresario)_ e seu metodo de dependencia _(compararDadosLogin)_
-	public Empresario loginEmpresario(DadosLogin dl) {
-		for(Empresario empresario : empresarios) {
-			if(empresario.getDadosLogin().compararDadosLogin(dl)) return empresario;
-		}
-		return null;
-	}
-
-	public List<Empresario> getEmpresarios() {
-		return empresarios;
 	}
 }

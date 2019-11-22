@@ -1,7 +1,6 @@
 package antenas;
 
 public class Projeto {
-
 	private String chave;
 	//acrescentar todos os demais atributos do projeto que foram passados na fase de requisitos
 	private String empresario;
@@ -9,16 +8,17 @@ public class Projeto {
 	private String descricao;
 	private String link;
 
-	public Projeto(String chave) {
-		this.chave = chave;
+	public Projeto(String empresario, String titulo, String descricao, String link) {
+		this.chave = Sha1Hex.makeSHA1Hash(empresario + titulo + descricao + link);
+
+		this.empresario = empresario;
+		this.titulo = titulo;
+		this.descricao = descricao;
+		this.link = link;
 	}
 
 	public String getChave() {
-		return chave;
-	}
-
-	public void setChave(String chave) {
-		this.chave = chave;
+		return this.chave;
 	}
 
 	public String getEmpresario() {
