@@ -1,5 +1,8 @@
 package antenas;
 
+import java.io.UnsupportedEncodingException;
+import java.security.NoSuchAlgorithmException;
+
 public class Projeto {
 	private String chave;
 	//acrescentar todos os demais atributos do projeto que foram passados na fase de requisitos
@@ -8,7 +11,7 @@ public class Projeto {
 	private String descricao;
 	private String link;
 
-	public Projeto(String empresario, String titulo, String descricao, String link) {
+	public Projeto(String empresario, String titulo, String descricao, String link) throws NoSuchAlgorithmException, UnsupportedEncodingException {
 		this.chave = Sha1Hex.makeSHA1Hash(empresario + titulo + descricao + link);
 
 		this.empresario = empresario;
@@ -25,31 +28,31 @@ public class Projeto {
 		return this.empresario;
 	}
 
-	public String setEmpresario(String value) {
-		return this.email = value;
+	public String setEmpresario(String empresario) {
+		return this.empresario = empresario;
 	}
 
 	public String getTitulo() {
 		return this.titulo;
 	}
 
-	public String setTitulo(String value) {
-		return this.email = value;
+	public String setTitulo(String titulo) {
+		return this.titulo = titulo;
 	}
 
 	public String getDescricao() {
 		return this.descricao;
 	}
 
-	public String setDescricao(String value) {
-		return this.email = value;
+	public String setDescricao(String descricao) {
+		return this.descricao = descricao;
 	}
 
 	public String getLink() {
 		return this.link;
 	}
 
-	public String setLink(String value) {
-		return this.email = value;
+	public String setLink(String link) {
+		return this.link = link;
 	}
 }

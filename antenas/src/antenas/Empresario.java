@@ -2,11 +2,11 @@ package antenas;
 
 public class Empresario {
 	private String cpf;
-	private DadosLogin dadosLogin;
+	private DadosLogin dadoslogin;
 
-	public Empresario(String cpf, String email, String senha) {
+	public Empresario(String cpf, DadosLogin dadoslogin) {
 		this.cpf = cpf;
-		this.dadosLogin = new DadosLogin(email, senha)
+		this.dadoslogin = dadoslogin;
 	}
 
 	public String getCpf() {
@@ -18,10 +18,10 @@ public class Empresario {
 	}
 
 	public DadosLogin getDadosLogin() {
-		return dadosLogin;
+		return dadoslogin;
 	}
 
-	public void setDadosLogin(DadosLogin dadosLogin) {
-		this.dadosLogin = dadosLogin;
+	public void setDadosLogin(DadosLogin dadoslogin) {
+		this.dadoslogin = dadoslogin;
 	}
 }

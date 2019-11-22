@@ -1,17 +1,27 @@
 package antenas;
 
 public class Professor {
-	private DadosLogin dadosLogin;
+	private DadosLogin dadoslogin;
+	private String matricula;
 
-	public Professor(String email, String senha) {
-		this.dadosLogin = new DadosLogin(email, senha)
+	public Professor(DadosLogin dadoslogin, String matricula) {
+		this.dadoslogin = dadoslogin;
+		this.matricula = matricula;
 	}
 
 	public DadosLogin getDadosLogin() {
-		return dadosLogin;
+		return dadoslogin;
 	}
 
-	public void setDadosLogin(DadosLogin dadosLogin) {
-		this.dadosLogin = dadosLogin;
+	public void setDadosLogin(DadosLogin dadoslogin) {
+		this.dadoslogin = dadoslogin;
+	}
+
+	public String getMatricula() {
+		return this.matricula;
+	}
+
+	public String setMatricula(String matricula) {
+		return this.matricula = matricula;
 	}
 }

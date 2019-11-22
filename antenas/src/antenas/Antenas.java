@@ -48,6 +48,26 @@ public class Antenas {
 		}
 		return null;
 	}
+	public Aluno loginAluno(DadosLogin dl) {
+		for(Aluno aluno : alunos) {
+			if(aluno.getDadosLogin().compararDadosLogin(dl)) return aluno;
+		}
+		return null;
+	}
+	
+	public CADI loginCADI(DadosLogin dl) {
+		for(CADI cadi : cadis) {
+			if(cadi.getDadosLogin().compararDadosLogin(dl)) return cadi;
+		}
+		return null;
+	}
+	
+	public Professor loginProfessor(DadosLogin dl) {
+		for(Professor prof : professores) {
+			if(prof.getDadosLogin().compararDadosLogin(dl)) return prof;
+		}
+		return null;
+	}
 
 	public Empresario loginEmpresario(DadosLogin dl) {
 		for(Empresario empresario : empresarios) {
@@ -65,5 +85,21 @@ public class Antenas {
 			if(projeto.getChave().equals(chave)) return projeto;
 		}
 		return null;
+	}
+	
+	public List<Aluno> getAlunos() {
+		return alunos;
+	}
+	
+	public List<CADI> getCadis() {
+		return cadis;
+	}
+	
+	public List<Professor> getProfessores() {
+		return professores;
+	}
+	
+	public List<Projeto> getProjetos() {
+		return projetos;
 	}
 }
